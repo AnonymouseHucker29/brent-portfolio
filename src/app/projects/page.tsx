@@ -4,7 +4,7 @@ export default function Projects() {
     return (
         <>
             <Layout>
-                <div className="flex justify-center items-center h-screen text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+                <div className="flex pb-52 items-center h-screen justify-center text-2xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
                     You are in: {Projects.name}
                 </div>
             </Layout>

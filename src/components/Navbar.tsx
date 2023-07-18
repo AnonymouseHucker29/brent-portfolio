@@ -55,7 +55,7 @@ let Header = () => {
 
                     <ul
                         onClick={() => setMobileMenu(false)}
-                        className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in duration-400 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
+                        className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
                             }`}
                     >
                         {NavbarData.map((props) => (

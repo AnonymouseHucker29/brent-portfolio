@@ -8,12 +8,16 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="flex justify-center items-center h-screen text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <div className="flex pb-52 items-center h-screen justify-center text-2xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
           <TypewriterComponent
             options={{
-              strings: ["Hello there! :)", "I'm Brent Baylon", "an aspiring Web Developer"],
+              strings: ["Hello there! :)", "I'm Brent Baylon", "an aspiring Web Dev"],
               autoStart: true,
               loop: true,
+              delay: 40,
+              deleteSpeed: 40,
+              cursor: "_",
+              skipAddStyles: true,
             }}
           />
         </div>

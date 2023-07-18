@@ -1,6 +1,5 @@
 'use client'
 
-import * as React from "react";
 import Layout from "@/components/Layout";
 import TypewriterComponent from "typewriter-effect";
 

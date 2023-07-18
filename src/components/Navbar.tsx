@@ -60,7 +60,7 @@ let Header = () => {
                         </span>
                     </div>
                     <ul
-                        onClick={() => setMobileMenu(false)}
+                        onClick={() => handleNavLinkClick()}
                         className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
                             }`}
                     >
@@ -73,7 +73,6 @@ let Header = () => {
                                     : 'hover:bg-purple-400'
                                     }`}
                                 target={props.target}
-                                onClick={handleNavLinkClick}
                             >
                                 {props.title}
                             </Link>

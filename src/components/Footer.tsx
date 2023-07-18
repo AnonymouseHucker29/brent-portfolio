@@ -1,3 +1,5 @@
+'use client'
+
 const Footer = () => {
     return (
         <footer className="p-4">

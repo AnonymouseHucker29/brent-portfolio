@@ -17,7 +17,6 @@ export default function Home() {
               delay: 40,
               deleteSpeed: 40,
               cursor: "_",
-              skipAddStyles: true,
             }}
           />
         </div>

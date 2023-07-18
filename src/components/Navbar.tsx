@@ -25,6 +25,13 @@ let Header = () => {
 
     if (!mounted) return null;
 
+    const handleNavLinkClick = () => {
+        // Add a small delay before closing the mobile menu
+        setTimeout(() => {
+            setMobileMenu(false);
+        }, 300); // Adjust the delay (in milliseconds) as needed
+    };
+
     return (
         <>
             <header className="max-w-7xl mx-auto pl-8 pr-4 sm:px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
@@ -52,7 +59,6 @@ let Header = () => {
                             />
                         </span>
                     </div>
-
                     <ul
                         onClick={() => setMobileMenu(false)}
                         className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
@@ -67,6 +73,7 @@ let Header = () => {
                                     : 'hover:bg-purple-400'
                                     }`}
                                 target={props.target}
+                                onClick={handleNavLinkClick}
                             >
                                 {props.title}
                             </Link>
@@ -76,7 +83,7 @@ let Header = () => {
                         <ThemeToggle />
                     </div>
                 </nav>
-            </header>
+            </header >
         </>
     );
 };

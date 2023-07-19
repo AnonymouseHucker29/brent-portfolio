@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/theme-provider'
 import localFont from 'next/font/local'
+import Layout from '@/components/Layout'
 
 const raisonne = localFont({ src: '../../public/fonts/raisonne-demibold.ttf' })
 
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={raisonne.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <Layout>
+            {children}
+          </Layout>
         </ThemeProvider>
       </body>
     </html>

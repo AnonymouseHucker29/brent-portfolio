@@ -16,14 +16,15 @@ let Header = () => {
         return router === link;
     }
 
-    const [mounted, setMounted] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    // const [mounted, setMounted] = useState(false);
 
-    if (!mounted) return null;
+    // useEffect(() => {
+    //     setMounted(true);
+    // }, []);
+
+    // if (!mounted) return null;
 
     const handleNavLinkClick = () => {
         // Add a small delay before closing the mobile menu
@@ -60,7 +61,7 @@ let Header = () => {
                         </span>
                     </div>
                     <ul
-                        onClick={() => handleNavLinkClick()}
+                        onClick={handleNavLinkClick}
                         className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
                             }`}
                     >

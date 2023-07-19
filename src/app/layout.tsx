@@ -2,13 +2,15 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/theme-provider'
 import localFont from 'next/font/local'
-import Layout from '@/components/Layout'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const raisonne = localFont({ src: '../../public/fonts/raisonne-demibold.ttf' })
 
 export const metadata: Metadata = {
   title: 'Brent Baylon',
   description: 'Personal Portfolio',
+  icons: 'logo.svg',
 }
 
 export default function RootLayout({
@@ -20,9 +22,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={raisonne.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Layout>
-            {children}
-          </Layout>
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

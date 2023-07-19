@@ -27,10 +27,9 @@ let Header = () => {
     // if (!mounted) return null;
 
     const handleNavLinkClick = () => {
-        // Add a small delay before closing the mobile menu
         setTimeout(() => {
             setMobileMenu(false);
-        }, 300); // Adjust the delay (in milliseconds) as needed
+        }, 300);
     };
 
     return (
@@ -69,7 +68,7 @@ let Header = () => {
                             <Link
                                 key={props.id}
                                 href={props.url}
-                                className={`text-base sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(props.url)
+                                className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(props.url)
                                     ? 'bg-purple-600'
                                     : 'hover:bg-purple-400'
                                     }`}
@@ -79,7 +78,7 @@ let Header = () => {
                             </Link>
                         ))}
                     </ul>
-                    <div className='relative flex items-center'>
+                    <div className='flex items-center'>
                         <ThemeToggle />
                     </div>
                 </nav>

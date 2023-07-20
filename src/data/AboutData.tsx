@@ -11,17 +11,17 @@ const AboutData: IAbout[] = [
     },
     {
         id: 2,
-        logo: <BsDiscord size={50} fill="#5165f6" />,
-        title: "Discord",
-        username: "meowts00",
-        url: "https://www.discord.com",
-    },
-    {
-        id: 3,
         logo: <BsLinkedin size={50} fill="#0e76a8" />,
         title: "LinkedIn",
         username: "Brent Baylon",
         url: "https://www.linkedin.com/in/brent-baylon-18066b234/",
+    },
+    {
+        id: 3,
+        logo: <BsDiscord size={50} fill="#5165f6" />,
+        title: "Discord",
+        username: "meowts00",
+        url: "https://www.discord.com",
     },
     {
         id: 4,

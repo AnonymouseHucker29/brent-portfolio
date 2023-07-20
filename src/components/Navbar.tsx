@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import ThemeToggle from '@/components/theme-toggle';
 import NavbarData from '@/data/NavbarData';
+import { useState } from 'react';
 import { Fade as Hamburger } from 'hamburger-react';
 import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/ui/logo';
@@ -34,30 +34,27 @@ let Header = () => {
 
     return (
         <>
-            <header className="max-w-7xl mx-auto pl-8 pr-4 sm:px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
+            <header className="max-w-7xl mx-auto px-8 md:px-8 flex items-center justify-between h-24">
                 <Link
                     href="/"
                     onClick={() => setMobileMenu(false)}
-                    className="z-10"
                 >
-                    <div className='flex'>
+                    <div className="flex items-center">
                         <Logo aria-label="Logo" />
                         <span className='text-xl sm:text-2xl underline'>rent</span>
                     </div>
                 </Link>
-                <nav className="flex gap-6">
-                    <div className="flex justify-center gap-5 items-center">
-                        <span className="md:hidden z-10">
-                            <Hamburger
-                                toggled={mobileMenu}
-                                toggle={setMobileMenu}
-                                size={24}
-                                rounded
-                                label="Show menu"
-                                hideOutline
-                                duration={0.5}
-                            />
-                        </span>
+                <nav className="flex gap-6 items-center">
+                    <div className="flex items-center md:hidden">
+                        <Hamburger
+                            toggled={mobileMenu}
+                            toggle={setMobileMenu}
+                            size={24}
+                            rounded
+                            label="Show menu"
+                            hideOutline
+                            duration={0.5}
+                        />
                     </div>
                     <ul
                         onClick={handleNavLinkClick}

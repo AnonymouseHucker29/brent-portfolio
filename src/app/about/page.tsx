@@ -16,7 +16,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
         >
             <div className="pt-12 mb-10 text-center text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
-                I'm online!
+                I&apos;m online!
             </div>
             <section className="flex flex-wrap justify-center items-center gap-10">
                 {AboutData.map((props) => (

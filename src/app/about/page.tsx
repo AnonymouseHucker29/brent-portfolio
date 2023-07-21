@@ -9,6 +9,7 @@ import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, Dialog
 import { Button } from "@/components/ui/button";
 
 export default function About() {
+
     return (
         <motion.div
             className="flex flex-col items-center justify-center min-h-screen"
@@ -21,7 +22,7 @@ export default function About() {
             <div className="pt-12 mb-10 text-center text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
                 I&apos;m online!
             </div>
-            <section className="flex flex-wrap justify-center items-center gap-10">
+            <section className="flex flex-wrap justify-center items-center gap-6">
                 {AboutData.map((props) => (
                     <motion.div
                         key={props.id}
@@ -52,19 +53,19 @@ export default function About() {
                                     </CardContent>
                                 </Card>
                             </DialogTrigger>
-                            <DialogContent>
+                            <DialogContent className="rounded-xl">
                                 <DialogHeader>
                                     <DialogTitle>
                                         You are going to {props.title} page!
                                     </DialogTitle>
                                 </DialogHeader>
-                                <DialogDescription>
+                                <DialogDescription className="break-all">
                                     Link:<br />{props.url}
                                 </DialogDescription>
                                 <DialogFooter>
                                     <Button
                                         asChild
-                                        className="bg-purple-500 dark:bg-purple-500 hover:bg-purple-600 dark:hover:bg-purple-600"
+                                        className="text-center bg-purple-500 dark:bg-purple-500 hover:bg-purple-600 dark:hover:bg-purple-600"
                                     >
                                         <Link href={props.url}
                                             target="_blank"
@@ -78,7 +79,7 @@ export default function About() {
                         </Dialog>
                     </motion.div>
                 ))}
-            </section>
-        </ motion.div>
+            </section >
+        </ motion.div >
     );
 }

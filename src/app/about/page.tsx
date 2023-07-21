@@ -45,7 +45,7 @@ export default function About() {
                                             <div className="flex text-xs items-center">
                                                 {props.title}<OnlineIcon />
                                             </div>
-                                            <div className="flex items-center">
+                                            <div className="flex text-lg">
                                                 {props.username}
                                             </div>
                                         </div>
@@ -56,12 +56,13 @@ export default function About() {
                                 <DialogHeader>
                                     <DialogTitle>You are going to {props.title} page!</DialogTitle>
                                 </DialogHeader>
-                                <DialogDescription>Link: {props.url}</DialogDescription>
+                                <DialogDescription>Link:<br />{props.url}</DialogDescription>
                                 <DialogFooter>
                                     <Button asChild>
                                         <Link href={props.url}
                                             target="_blank"
-                                            rel="noopener noreferrer">
+                                            rel="noopener noreferrer"
+                                        >
                                             Open in new tab
                                         </Link>
                                     </Button>

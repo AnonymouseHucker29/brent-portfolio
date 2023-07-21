@@ -54,11 +54,18 @@ export default function About() {
                             </DialogTrigger>
                             <DialogContent>
                                 <DialogHeader>
-                                    <DialogTitle>You are going to {props.title} page!</DialogTitle>
+                                    <DialogTitle>
+                                        You are going to {props.title} page!
+                                    </DialogTitle>
                                 </DialogHeader>
-                                <DialogDescription>Link:<br />{props.url}</DialogDescription>
+                                <DialogDescription>
+                                    Link:<br />{props.url}
+                                </DialogDescription>
                                 <DialogFooter>
-                                    <Button asChild>
+                                    <Button
+                                        asChild
+                                        className="bg-purple-500 dark:bg-purple-500 hover:bg-purple-600 dark:hover:bg-purple-600"
+                                    >
                                         <Link href={props.url}
                                             target="_blank"
                                             rel="noopener noreferrer"

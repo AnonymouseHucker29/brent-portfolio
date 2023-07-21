@@ -4,6 +4,9 @@ import AboutData from "@/data/AboutData";
 import Link from "next/link";
 import { Card, CardDescription, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { OnlineIcon } from "@/components/ui/onlineIcon";
+import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function About() {
     return (
@@ -31,16 +34,40 @@ export default function About() {
                             ease: "easeIn",
                         }}
                     >
-                        <Link href={props.url} target="_blank">
-                            <Card className="p-8 px-8 sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-left relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-xl hover:shadow-2xl dark:hover:shadow-3xl">
-                                <CardContent className="flex items-center justify-center h-full">
-                                    {props.logo}
-                                </CardContent>
-                                <CardDescription className="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl flex items-center justify-center h-full text-black dark:text-white">
-                                    {props.username}
-                                </CardDescription>
-                            </Card>
-                        </Link>
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Card className="cursor-pointer hover:animate-pulse container mx-auto p-8 px-8 sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-left relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-xl hover:shadow-2xl dark:hover:shadow-3xl">
+                                    <CardContent className="flex items-center h-full w-full p-2 sm:mr-8 md:mr-8 lg:mr-0 xl:-mr-8">
+                                        <div className="scale-75 sm:scale-50 md:scale-75 lg:scale-90 xl:scale-100">
+                                            {props.logo}
+                                        </div>
+                                        <div className="sm:text-lg md:text-lg lg:text-3xl xl:text-2xl text-black dark:text-white ml-4">
+                                            <div className="flex text-xs items-center">
+                                                {props.title}<OnlineIcon />
+                                            </div>
+                                            <div className="flex items-center">
+                                                {props.username}
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </DialogTrigger>
+                            <DialogContent>
+                                <DialogHeader>
+                                    <DialogTitle>You are going to {props.title} page!</DialogTitle>
+                                </DialogHeader>
+                                <DialogDescription>Link: {props.url}</DialogDescription>
+                                <DialogFooter>
+                                    <Button asChild>
+                                        <Link href={props.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                            Open in new tab
+                                        </Link>
+                                    </Button>
+                                </DialogFooter>
+                            </DialogContent>
+                        </Dialog>
                     </motion.div>
                 ))}
             </section>

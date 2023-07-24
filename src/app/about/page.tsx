@@ -1,12 +1,13 @@
-'use client'
+"use client"
 
-import AboutData from "@/data/AboutData";
-import Link from "next/link";
-import { Card, CardDescription, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { OnlineIcon } from "@/components/ui/onlineIcon";
-import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, DialogDescription, DialogFooter } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import AboutData from "@/data/AboutData"
+import Link from "next/link"
+import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { OnlineIcon } from "@/components/ui/onlineIcon"
+import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, DialogDescription, DialogFooter } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { DialogClose } from "@radix-ui/react-dialog"
 
 export default function About() {
 
@@ -63,23 +64,28 @@ export default function About() {
                                     Link:<br />{props.url}
                                 </DialogDescription>
                                 <DialogFooter>
-                                    <Button
-                                        asChild
-                                        className="text-center bg-purple-500 dark:bg-purple-500 hover:bg-purple-600 dark:hover:bg-purple-600"
-                                    >
-                                        <Link href={props.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                    <DialogClose asChild>
+                                        <Button
+                                            asChild
+                                            className="text-center bg-purple-500 dark:bg-purple-500 hover:bg-purple-600 dark:hover:bg-purple-600"
                                         >
-                                            Open in new tab
-                                        </Link>
-                                    </Button>
+                                            <Link
+                                                href={props.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                as={props.url}
+                                                prefetch={true}
+                                            >
+                                                Open in new tab
+                                            </Link>
+                                        </Button>
+                                    </DialogClose>
                                 </DialogFooter>
                             </DialogContent>
                         </Dialog>
                     </motion.div>
                 ))}
-            </section >
-        </ motion.div >
-    );
+            </section>
+        </motion.div>
+    )
 }

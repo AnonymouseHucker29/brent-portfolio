@@ -1,5 +1,5 @@
-import IAbout from "@/interfaces/IAbout";
-import { BsGithub, BsDiscord, BsLinkedin, BsInstagram, BsTelegram, BsFacebook, BsTwitter, BsReddit } from "react-icons/bs";
+import IAbout from "@/interfaces/IAbout"
+import { BsGithub, BsDiscord, BsLinkedin, BsInstagram, BsTelegram, BsFacebook, BsTwitter, BsReddit } from "react-icons/bs"
 
 const AboutData: IAbout[] = [
     {

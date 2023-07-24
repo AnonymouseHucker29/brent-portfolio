@@ -1,36 +1,28 @@
-'use client'
+"use client"
 
-import Link from 'next/link';
-import ThemeToggle from '@/components/theme-toggle';
-import NavbarData from '@/data/NavbarData';
-import { useState } from 'react';
-import { Fade as Hamburger } from 'hamburger-react';
-import { usePathname } from 'next/navigation';
-import { Logo } from '@/components/ui/logo';
+import Link from "next/link"
+import ThemeToggle from "@/components/theme-toggle"
+import NavbarData from "@/data/NavbarData"
+import { useState } from "react"
+import { Fade as Hamburger } from "hamburger-react"
+import { usePathname } from "next/navigation"
+import { Logo } from "@/components/ui/logo"
 
-let Header = () => {
+export let Navbar = () => {
 
-    const router = usePathname();
+    const router = usePathname()
 
     function isLinkActive(link: string) {
-        return router === link;
+        return router === link
     }
 
-    const [mobileMenu, setMobileMenu] = useState(false);
-
-    // const [mounted, setMounted] = useState(false);
-
-    // useEffect(() => {
-    //     setMounted(true);
-    // }, []);
-
-    // if (!mounted) return null;
+    const [mobileMenu, setMobileMenu] = useState(false)
 
     const handleNavLinkClick = () => {
         setTimeout(() => {
-            setMobileMenu(false);
-        }, 300);
-    };
+            setMobileMenu(false)
+        }, 300)
+    }
 
     return (
         <>
@@ -41,7 +33,7 @@ let Header = () => {
                 >
                     <div className="flex items-center">
                         <Logo aria-label="Logo" />
-                        <span className='text-xl sm:text-2xl underline'>rent</span>
+                        <span className="text-xl sm:text-2xl underline">rent</span>
                     </div>
                 </Link>
                 <nav className="flex gap-6 items-center">
@@ -66,8 +58,8 @@ let Header = () => {
                                 key={props.id}
                                 href={props.url}
                                 className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(props.url)
-                                    ? 'bg-purple-600'
-                                    : 'hover:bg-purple-400'
+                                    ? "bg-purple-600"
+                                    : "hover:bg-purple-400"
                                     }`}
                                 target={props.target}
                             >
@@ -75,13 +67,11 @@ let Header = () => {
                             </Link>
                         ))}
                     </ul>
-                    <div className='flex items-center'>
+                    <div className="flex items-center">
                         <ThemeToggle />
                     </div>
                 </nav>
             </header >
         </>
-    );
-};
-
-export default Header;
+    )
+}

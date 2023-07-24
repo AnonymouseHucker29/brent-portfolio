@@ -1,16 +1,16 @@
-import '@/styles/globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import localFont from 'next/font/local'
-import type { Metadata } from 'next'
-import { ThemeProvider } from '@/components/theme-provider'
+import "@/styles/globals.css"
+import localFont from "next/font/local"
+import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
+import type { Metadata } from "next"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const raisonne = localFont({ src: '../../public/fonts/raisonne-demibold.ttf' })
+const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
 
 export const metadata: Metadata = {
-  title: 'Brent Baylon',
-  description: 'Personal Portfolio',
-  icons: '/icons/logo.svg',
+  title: "Brent Baylon",
+  description: "Personal Portfolio",
+  icons: "/icons/logo.svg",
 }
 
 export default function RootLayout({

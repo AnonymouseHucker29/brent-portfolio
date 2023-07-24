@@ -1,4 +1,4 @@
-import INavbar from "@/interfaces/INavbar";
+import INavbar from "@/interfaces/INavbar"
 
 const NavbarData: INavbar[] = [
     {
@@ -27,4 +27,4 @@ const NavbarData: INavbar[] = [
     }
 ]
 
-export default NavbarData;
+export default NavbarData

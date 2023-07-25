@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import ThemeToggle from "@/components/theme-toggle"
+import ThemeToggle from "@/components/ThemeToggle"
 import NavbarData from "@/data/NavbarData"
 import { useState } from "react"
 import { Fade as Hamburger } from "hamburger-react"
@@ -62,6 +62,7 @@ export let Navbar = () => {
                                     : "hover:bg-purple-400"
                                     }`}
                                 target={props.target}
+                                prefetch={true}
                             >
                                 {props.title}
                             </Link>

@@ -1,6 +1,6 @@
 "use client"
 
-import SectionPage from "./section"
+import AboutSection from "./section"
 import { motion } from "framer-motion"
 
 export default function About() {
@@ -18,7 +18,7 @@ export default function About() {
                 <div className="pt-12 mb-10 text-center text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
                     I&apos;m online!
                 </div>
-                <SectionPage />
+                <AboutSection />
             </motion.div>
         </>
     )

@@ -50,9 +50,9 @@ export default function Home() {
               </Link>
             </Button>
           </motion.div>
+          <FbChatPlugin />
         </div>
       </motion.div>
-      <FbChatPlugin />
     </>
   )
 }

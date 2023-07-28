@@ -1,5 +1,6 @@
 "use client"
 
+import FbChatPlugin from "@/components/misc/fbChatPlugin"
 import AboutSection from "./section"
 import { motion } from "framer-motion"
 
@@ -20,6 +21,7 @@ export default function About() {
                 </div>
                 <AboutSection />
             </motion.div>
+            <FbChatPlugin />
         </>
     )
 }

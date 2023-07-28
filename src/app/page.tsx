@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import TypewriterComponent from "typewriter-effect"
-import FbChatPlugin from "@/components/misc/fbChatPlugin"
 import { Button } from "@/components/ui/button"
 import { PersonIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
@@ -50,7 +49,6 @@ export default function Home() {
               </Link>
             </Button>
           </motion.div>
-          <FbChatPlugin />
         </div>
       </motion.div>
     </>

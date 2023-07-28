@@ -4,8 +4,8 @@ import { FacebookProvider, CustomChat } from 'react-facebook'
 
 const FbChatPlugin = () => {
   return (
-    <FacebookProvider appId="6596281663765476" chatSupport>
-      <CustomChat pageId="109262068891778" minimized={true} />
+    <FacebookProvider appId="1017046112998468" chatSupport>
+      <CustomChat pageId="109568422183829" greetingDialogDisplay="show" minimized={false} />
     </FacebookProvider>
   )
 }

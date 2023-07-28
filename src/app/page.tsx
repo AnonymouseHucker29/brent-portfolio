@@ -7,10 +7,10 @@ import { PersonIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
 import { FbChatPlugin } from "@/components/misc/fbChatPlugin"
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
-      <motion.div
+      <motion.main
         className="flex items-center justify-center h-screen -mb-32"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, translateY: 0 }}
@@ -51,8 +51,8 @@ export default function Home() {
             </Button>
           </motion.div>
         </div>
-      </motion.div>
-      <FbChatPlugin />
+        <FbChatPlugin />
+      </motion.main>
     </>
   )
 }

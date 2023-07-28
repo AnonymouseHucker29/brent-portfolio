@@ -1,6 +1,6 @@
 "use client"
 
-import { FacebookProvider, CustomChat } from 'react-facebook';
+import { FacebookProvider, CustomChat } from 'react-facebook'
 
 const FbChatPlugin = () => {
   return (

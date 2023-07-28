@@ -27,7 +27,7 @@ export default function AboutSection() {
                 >
                     <Dialog>
                         <DialogTrigger asChild>
-                            <Card className="cursor-pointer hover:animate-pulse container mx-auto p-8 px-8 sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-xl hover:shadow-2xl dark:hover:shadow-3xl">
+                            <Card className="cursor-pointer hover:animate-pulse container mx-auto p-8 px-8 sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-md hover:shadow-2xl dark:hover:shadow-2xl border-2">
                                 <CardContent className="flex items-center h-full w-full p-2 sm:mr-8 md:mr-8 lg:mr-0 xl:-mr-8">
                                     <div className="scale-75 sm:scale-50 md:scale-75 lg:scale-90 xl:scale-100">
                                         {about.logo}

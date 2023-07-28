@@ -21,7 +21,7 @@ export default function SkillsSection() {
                         ease: "easeIn",
                     }}
                 >
-                    <Card className="container mx-auto sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-xl hover:shadow-2xl dark:hover:shadow-3xl">
+                    <Card className="container mx-auto sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-md hover:shadow-2xl dark:hover:shadow-2xl border-2">
                         <CardHeader>
                             <CardTitle className="text-xl">{skills.title}</CardTitle>
                         </CardHeader>

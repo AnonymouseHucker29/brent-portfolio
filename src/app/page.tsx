@@ -36,7 +36,7 @@ export default function Home() {
             whileInView={{ opacity: 1, translateY: 0 }}
             viewport={{ once: true }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 4 }}
+            transition={{ duration: 1 }}
           >
             <Button
               asChild

@@ -6,7 +6,7 @@ import NavbarData from "@/data/NavbarData"
 import { useState } from "react"
 import { Fade as Hamburger } from "hamburger-react"
 import { usePathname } from "next/navigation"
-import { Logo } from "@/components/ui/logo"
+import { Logo } from "@/components/misc/logo"
 
 export let Navbar = () => {
 

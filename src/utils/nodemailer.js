@@ -11,7 +11,6 @@ app.use(cors())
 
 const myEmail = process.env.EMAIL
 const password = process.env.PASSWORD
-const PORT = 3001
 
 app.post("/send-email", (req, res) => {
 
@@ -48,6 +47,4 @@ app.post("/send-email", (req, res) => {
     } catch (error) {
         console.log(error)
     }
-}).listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`)
 })

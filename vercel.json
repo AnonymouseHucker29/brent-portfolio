@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "routes": [
+        {
+            "src": "/api/send-email",
+            "dest": "/src/utils/nodemailer.js"
+        }
+    ]
+}

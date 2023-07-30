@@ -1,10 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import TypewriterComponent from "typewriter-effect"
-import { Button } from "@/components/ui/button"
-import { PersonIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
+import { EmailBtn } from "@/components/EmailBtn"
 
 export default function Home() {
   return (
@@ -36,17 +34,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Button
-            asChild
-            variant="outline"
-            className="mt-40 p-8 rounded-full border-2 border-purple-600 dark:border-purple-600 hover:bg-purple-600 dark:hover:bg-purple-600 animate-pulse hover:animate-none"
-          >
-            <Link
-              href="/about"
-            >
-              <PersonIcon className="mr-2 h-5 w-5" />Get in touch
-            </Link>
-          </Button>
+          <EmailBtn />
         </motion.div>
       </div>
     </motion.main>

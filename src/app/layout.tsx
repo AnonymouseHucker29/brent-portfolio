@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import type { Metadata } from "next"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { FbChatPlugin } from "@/components/misc/fbChatPlugin"
+// import { FbChatPlugin } from "@/utils/fbChatPlugin"
 
 const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
 
@@ -26,7 +26,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
-          <FbChatPlugin />
+          {/* <FbChatPlugin /> */}
           <Footer />
         </ThemeProvider>
       </body>

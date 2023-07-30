@@ -36,7 +36,7 @@ export default function ProfileForm() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
 
-        axios.post("/send-email", {
+        axios.post("/api/send-email", {
             name: values.name,
             email: values.email,
             message: values.message

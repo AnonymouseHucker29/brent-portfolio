@@ -2,6 +2,7 @@
 
 import axios from "axios"
 import * as z from "zod"
+import "react-toastify/dist/ReactToastify.css"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormField, FormItem, FormMessage, FormLabel } from "@/components/ui/form"
@@ -34,8 +35,8 @@ export default function ProfileForm() {
     })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
-        axios.post('http://localhost:3001/send-email', {
+
+        axios.post("http://localhost:3001/send-email", {
             name: values.name,
             email: values.email,
             message: values.message
@@ -43,11 +44,14 @@ export default function ProfileForm() {
             .then(response => {
                 console.log(response.data);
                 toast.success("Email sent successfully!")
+                form.reset()
             })
             .catch(error => {
                 console.error(error);
                 toast.error("Error sending email.")
             });
+
+        console.log(values)
     }
 
     return (

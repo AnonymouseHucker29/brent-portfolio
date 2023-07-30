@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"node src/utils/nodemailer\"",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"next start\" \"node src/utils/nodemailer\"",
     "lint": "next lint"
   },
   "dependencies": {

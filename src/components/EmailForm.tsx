@@ -36,7 +36,7 @@ export default function ProfileForm() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
 
-        axios.post("/send-email", {
+        axios.post("https://brent-portfolio.vercel.app/api/route", {
             name: values.name,
             email: values.email,
             message: values.message

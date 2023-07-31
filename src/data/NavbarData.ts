@@ -21,9 +21,9 @@ const NavbarData: INavbar[] = [
     },
     {
         id: 4,
-        title: "Docs",
-        url: "/docs",
-        target: "_self",
+        title: "Resume",
+        url: "resume/resume.pdf",
+        target: "_blank",
     }
 ]
 

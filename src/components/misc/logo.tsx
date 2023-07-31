@@ -3,8 +3,8 @@ import * as React from "react"
 export const Logo = () => (
     <svg fill="currentColor"
         className="bi bi-bootstrap"
-        width={32}
-        height={32}
+        width={45}
+        height={45}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
     >

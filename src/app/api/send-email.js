@@ -12,7 +12,7 @@ app.use(cors())
 const myEmail = process.env.EMAIL
 const password = process.env.PASSWORD
 
-app.post("/api/send-email", (req, res) => {
+app.post("/send-email", (req, res) => {
 
     try {
         const { name, email, message } = req.body;

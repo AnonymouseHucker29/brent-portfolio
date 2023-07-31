@@ -36,7 +36,7 @@ export default function ProfileForm() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
 
-        axios.post("https://brent-portfolio.vercel.app/api/route", {
+        axios.post("https://stormy-onesies.cyclic.cloud/", {
             name: values.name,
             email: values.email,
             message: values.message

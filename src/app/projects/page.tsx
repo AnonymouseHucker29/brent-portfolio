@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Project | Brent Baylon",
+    title: "Projects | Brent Baylon",
     description: "Personal Portfolio",
     icons: "/icons/logo.svg",
 }

@@ -3,15 +3,8 @@ import localFont from "next/font/local"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { Metadata } from "next"
 
 const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
-
-export const metadata: Metadata = {
-  title: "Brent Baylon",
-  description: "Personal Portfolio",
-  icons: "/icons/logo.svg",
-}
 
 export default function RootLayout({
   children,

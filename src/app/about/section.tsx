@@ -1,13 +1,13 @@
 "use client"
 
-import AboutData from "@/data/AboutData"
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "framer-motion"
+import AboutData from "@/data/AboutData"
 import { OnlineIcon } from "@/components/misc/onlineIcon"
-import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, DialogDescription, DialogFooter } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { DialogClose } from "@radix-ui/react-dialog"
+import { Card, CardContent } from "@/components/ui/card"
+import { DialogHeader, DialogFooter } from "@/components/ui/dialog"
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose } from "@radix-ui/react-dialog"
+import { motion } from "framer-motion"
 
 export default function AboutSection() {
 

@@ -5,8 +5,8 @@ import AboutData from "@/data/AboutData"
 import { OnlineIcon } from "@/components/misc/onlineIcon"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { DialogHeader, DialogFooter } from "@/components/ui/dialog"
-import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose } from "@radix-ui/react-dialog"
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogHeader, DialogFooter } from "@/components/ui/dialog"
+import { DialogClose } from "@radix-ui/react-dialog"
 import { motion } from "framer-motion"
 
 export default function AboutSection() {

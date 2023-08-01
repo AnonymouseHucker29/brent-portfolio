@@ -7,6 +7,7 @@ export default function About() {
 
     return (
         <>
+            <title>{About.name.concat(" | Brent Baylon")}</title>
             <motion.div
                 className="flex flex-col items-center justify-center min-h-screen"
                 initial={{ opacity: 0, translateY: "50px" }}

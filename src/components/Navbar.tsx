@@ -18,12 +18,6 @@ export let Navbar = () => {
 
     const [mobileMenu, setMobileMenu] = useState(false)
 
-    const handleNavLinkClick = () => {
-        setTimeout(() => {
-            setMobileMenu(false)
-        }, 300)
-    }
-
     return (
         <header className="max-w-7xl mx-auto px-8 md:px-8 flex items-center justify-between h-24">
             <Link
@@ -47,22 +41,22 @@ export let Navbar = () => {
                     />
                 </div>
                 <ul
-                    onClick={handleNavLinkClick}
+                    onClick={() => setMobileMenu(false)}
                     className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
                         }`}
                 >
-                    {NavbarData.map((props) => (
+                    {NavbarData.map((links) => (
                         <Link
-                            key={props.id}
-                            href={props.url}
-                            className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(props.url)
+                            key={links.id}
+                            href={links.url}
+                            className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(links.url)
                                 ? "bg-purple-600"
                                 : "hover:bg-purple-400"
                                 }`}
-                            target={props.target}
+                            target={links.target}
                             prefetch={true}
                         >
-                            {props.title}
+                            {links.title}
                         </Link>
                     ))}
                 </ul>

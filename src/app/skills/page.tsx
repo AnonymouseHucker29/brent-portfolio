@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 export default function Skills() {
     return (
         <>
+            <title>{Skills.name.concat(" | Brent Baylon")}</title>
             <motion.div
                 className="flex flex-col items-center justify-center min-h-screen"
                 initial={{ opacity: 0, translateY: "50px" }}

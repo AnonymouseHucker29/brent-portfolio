@@ -2,9 +2,8 @@ import "@/styles/globals.css"
 import localFont from "next/font/local"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
-import type { Metadata } from "next"
 import { ThemeProvider } from "@/components/ThemeProvider"
-// import { FbChatPlugin } from "@/utils/fbChatPlugin"
+import { Metadata } from "next"
 
 const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
 
@@ -26,7 +25,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
-          {/* <FbChatPlugin /> */}
           <Footer />
         </ThemeProvider>
       </body>

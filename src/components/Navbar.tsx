@@ -38,15 +38,17 @@ export let Navbar = () => {
                         label="Show menu"
                         hideOutline
                         duration={0.5}
+                        color="#af4bfb"
                     />
                 </div>
                 <ul
                     onClick={() => setMobileMenu(false)}
-                    className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"
-                        }`}
+                    className={`md:flex md:items-center z-[1] text-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 space-x-4 transition-all ease-in-out duration-500 ${mobileMenu ? "top-[95px]" : "top-[-400px]"}`}
                 >
                     {NavbarData.map((links) => (
                         <Link
+                            rel="preload"
+                            as={links.url}
                             key={links.id}
                             href={links.url}
                             className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${isLinkActive(links.url)
@@ -54,7 +56,6 @@ export let Navbar = () => {
                                 : "hover:bg-purple-400"
                                 }`}
                             target={links.target}
-                            prefetch={true}
                         >
                             {links.title}
                         </Link>

@@ -1,10 +1,10 @@
+import EmailForm from "@/components/EmailForm"
 import { PersonIcon } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogHeader, DialogTitle, DialogContent, DialogDescription, DialogFooter } from "@/components/ui/dialog"
-import React from "react"
-import EmailForm from "@/components/EmailForm"
 
 export const EmailBtn = () => {
+
     return (
         <Dialog>
             <DialogTrigger asChild>

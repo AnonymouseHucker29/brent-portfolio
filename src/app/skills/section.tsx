@@ -1,6 +1,6 @@
 import SkillsData from "@/data/SkillsData"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Popover, PopoverTrigger, PopoverContent } from "@radix-ui/react-popover"
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
 import { motion } from "framer-motion"
 
 export default function SkillsSection() {

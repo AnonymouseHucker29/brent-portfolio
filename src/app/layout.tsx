@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { ThemeProvider } from "@/components/ThemeProvider"
 
-const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
+export const raisonne = localFont({ src: "../../public/fonts/raisonne-demibold.ttf" })
 
 export default function RootLayout({
   children,

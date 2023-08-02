@@ -19,7 +19,7 @@ export default function SkillsSection() {
                         ease: "easeIn",
                     }}
                 >
-                    <Card className="container mx-auto sm:px-8 md:px-10 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-md hover:shadow-2xl dark:hover:shadow-2xl border-2 border-purple-600 dark:border-purple-600">
+                    <Card className="container mx-auto sm:px-8 md:px-5 flex flex-col items-center rounded-lg space-y-2 mt-5 w-80 sm:w-80 lg:w-[30rem] text-center relative transition-all duration-300 ease-in-out top-0 hover:-top-1 shadow-md hover:shadow-2xl dark:hover:shadow-2xl border-2 border-purple-600 dark:border-purple-600">
                         <CardHeader>
                             <CardTitle className="text-xl">{skills.title}</CardTitle>
                         </CardHeader>
@@ -30,7 +30,9 @@ export default function SkillsSection() {
                                         <Popover>
                                             <PopoverTrigger asChild>
                                                 <div>
-                                                    <div className="hover:animate-pulse cursor-pointer scale-75 sm:scale-75 md:scale-90 lg:scale-90 xl:scale-100">{iconData.logo}</div>
+                                                    <div className="hover:animate-pulse cursor-pointer scale-75 sm:scale-75 md:scale-90 lg:scale-90 xl:scale-100">
+                                                        {iconData.logo}
+                                                    </div>
                                                 </div>
                                             </PopoverTrigger>
                                             <PopoverContent className="flex items-center text-justify tracking-tighter border-purple-600 dark:border-purple-600">

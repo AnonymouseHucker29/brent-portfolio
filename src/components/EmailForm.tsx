@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button"
 import { toast, ToastContainer } from "react-toastify"
 import { useState } from "react"
 import { CheckCircledIcon } from "@radix-ui/react-icons"
+import { raisonne } from "@/app/layout"
+import { useTheme } from "next-themes"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -69,6 +71,8 @@ export default function ProfileForm() {
         console.log(values)
     }
 
+    const { theme } = useTheme()
+
     return (
         <Form {...form}>
             <div>
@@ -94,7 +98,7 @@ export default function ProfileForm() {
                             variant="outline"
                             type="submit"
                             disabled={[isSubmitting, submitText === "check"].some(Boolean)}
-                            className="border-purple-600 dark:border-purple-600 hover:bg-purple-600 dark:hover:bg-purple-600"
+                            className="border-purple-600 dark:border-purple-600 md:hover:bg-purple-600 md:dark:hover:bg-purple-600 lg:hover:bg-purple-600 lg:dark:hover:bg-purple-600 xl:hover:bg-purple-600 xl:dark:hover:bg-purple-600"
                         >
                             {isSubmitting ? (
                                 <svg
@@ -128,7 +132,12 @@ export default function ProfileForm() {
                     </div>
                 </form>
             </div>
-            <ToastContainer position="top-center" theme="colored" />
+            <ToastContainer
+                closeOnClick={false}
+                bodyClassName={raisonne.className}
+                position="top-center"
+                theme={theme === "light" ? "light" : "dark"}
+            />
         </Form>
     )
 }

@@ -45,7 +45,7 @@ export default function ProfileForm() {
 
         setIsSubmitting(true)
 
-        axios.post("/api/index", {
+        axios.post("https://stormy-onesies.cyclic.cloud", {
             name: values.name,
             email: values.email,
             message: values.message

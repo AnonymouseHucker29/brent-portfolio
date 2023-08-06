@@ -9,9 +9,9 @@ const password = process.env.PASSWORD
 
 export async function POST(req: NextRequest) {
 
-    try {
-        const { name, email, message } = await req.json()
+    const { name, email, message } = await req.json()
 
+    try {
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -38,11 +38,12 @@ export async function POST(req: NextRequest) {
             }
         })
         return NextResponse.json({
-            message: "Email sent!",
+            name: name,
+            email: email,
+            message: message,
             status: 200,
             success: true
         })
-
     } catch (error: any) {
         console.log(error)
         return NextResponse.json({

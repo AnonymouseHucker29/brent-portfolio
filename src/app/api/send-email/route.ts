@@ -30,12 +30,16 @@ export async function POST(req: NextRequest) {
             text: `Name: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
         }
 
-        transporter.sendMail(mailOptions, (error: any, info: any) => {
-            if (error) {
-                console.error(error)
-            } else {
-                console.log("Email sent successfully:", info.response)
-            }
+        await new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, (error: any, info: any) => {
+                if (error) {
+                    console.error(error)
+                    reject(error)
+                } else {
+                    console.log("Email sent successfully:", info.response)
+                    resolve(info.response)
+                }
+            })
         })
         return NextResponse.json({
             name: name,

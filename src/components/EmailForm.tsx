@@ -46,7 +46,7 @@ export default function ProfileForm() {
         setIsSubmitting(true)
 
         axios
-            .post("api/send-email/", {
+            .post("/api/send-email/", {
                 name: values.name,
                 email: values.email,
                 message: values.message

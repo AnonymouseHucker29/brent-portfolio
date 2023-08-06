@@ -45,11 +45,12 @@ export default function ProfileForm() {
 
         setIsSubmitting(true)
 
-        axios.post("https://stormy-onesies.cyclic.cloud", {
-            name: values.name,
-            email: values.email,
-            message: values.message
-        })
+        axios
+            .post("/api/send-email", {
+                name: values.name,
+                email: values.email,
+                message: values.message
+            })
             .then(response => {
                 console.log(response.data)
                 toast.success("Email sent successfully!")
@@ -68,7 +69,7 @@ export default function ProfileForm() {
                 }, 6000)
             })
 
-        console.log(values)
+        console.log("Values:\n", JSON.stringify(values, null, 1))
     }
 
     const { theme } = useTheme()

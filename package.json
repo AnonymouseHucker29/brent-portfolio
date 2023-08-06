@@ -49,6 +49,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.9",
     "concurrently": "^8.2.0"
   }
 }

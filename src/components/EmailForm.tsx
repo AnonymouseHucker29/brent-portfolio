@@ -5,14 +5,21 @@ import * as z from "zod"
 import "react-toastify/dist/ReactToastify.css"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { Form, FormControl, FormField, FormItem, FormMessage, FormLabel } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { toast, ToastContainer } from "react-toastify"
 import { useState } from "react"
 import { CheckCircledIcon } from "@radix-ui/react-icons"
-import { raisonne } from "@/app/layout"
+import { avantgarde } from "@/app/layout"
 import { useTheme } from "next-themes"
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormMessage,
+    FormLabel
+} from "@/components/ui/form"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -135,7 +142,7 @@ export default function ProfileForm() {
             </div>
             <ToastContainer
                 closeOnClick={false}
-                bodyClassName={raisonne.className}
+                bodyClassName={avantgarde.className}
                 position="top-center"
                 theme={theme === "light" ? "light" : "dark"}
             />

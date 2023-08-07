@@ -4,10 +4,18 @@ import Link from "next/link"
 import AboutData from "@/data/AboutData"
 import { OnlineIcon } from "@/components/misc/onlineIcon"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogHeader, DialogFooter } from "@/components/ui/dialog"
-import { DialogClose } from "@radix-ui/react-dialog"
 import { motion } from "framer-motion"
+import { DialogClose } from "@radix-ui/react-dialog"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+    Dialog,
+    DialogTrigger,
+    DialogContent,
+    DialogTitle,
+    DialogDescription,
+    DialogHeader,
+    DialogFooter
+} from "@/components/ui/dialog"
 
 export default function AboutSection() {
 

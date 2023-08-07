@@ -1,7 +1,16 @@
 import SkillsData from "@/data/SkillsData"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
 import { motion } from "framer-motion"
+import {
+    Popover,
+    PopoverTrigger,
+    PopoverContent
+} from "@/components/ui/popover"
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardContent
+} from "@/components/ui/card"
 
 export default function SkillsSection() {
 

@@ -21,7 +21,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <Meteor />
+          <Meteor number={10} />
         </ThemeProvider>
       </body>
     </html>

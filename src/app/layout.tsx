@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Meteor } from "@/components/misc/meteor";
 
 export const avantgarde = localFont({
   src: "../../public/fonts/AVGARDD_2.woff",
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Meteor />
         </ThemeProvider>
       </body>
     </html>

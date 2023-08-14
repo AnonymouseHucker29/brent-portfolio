@@ -46,7 +46,7 @@ export default function ProfileForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitText, setSubmitText] = useState("submit");
+  const [submitText, setSubmitText] = useState("send");
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
@@ -71,7 +71,7 @@ export default function ProfileForm() {
       .finally(() => {
         setIsSubmitting(false);
         setTimeout(() => {
-          setSubmitText("submit");
+          setSubmitText("send");
         }, 6000);
       });
 
@@ -137,7 +137,7 @@ export default function ProfileForm() {
               ) : submitText === "check" ? (
                 <CheckCircledIcon color="#af4bfb" />
               ) : (
-                "Submit"
+                "Send"
               )}
             </Button>
           </div>

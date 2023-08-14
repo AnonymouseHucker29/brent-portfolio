@@ -1,5 +1,5 @@
 import EmailForm from "@/components/EmailForm";
-import { PersonIcon } from "@radix-ui/react-icons";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -17,7 +17,7 @@ export const EmailBtn = () => {
           variant="outline"
           className="mt-40 p-8 rounded-full border-2 border-purple-600 dark:border-purple-600 hover:bg-purple-600 dark:hover:bg-purple-600 animate-pulse hover:animate-none"
         >
-          <PersonIcon className="mr-2 h-5 w-5" />
+          <EnvelopeClosedIcon className="mr-2 h-5 w-5" />
           Get in touch
         </Button>
       </DialogTrigger>

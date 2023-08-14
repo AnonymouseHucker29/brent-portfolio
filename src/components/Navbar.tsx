@@ -8,7 +8,7 @@ import { Fade as Hamburger } from "hamburger-react";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/misc/logo";
 
-export let Navbar = () => {
+export const Navbar = () => {
   const router = usePathname();
 
   function isLinkActive(link: string) {

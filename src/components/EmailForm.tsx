@@ -106,7 +106,7 @@ export default function ProfileForm() {
               )}
             />
           ))}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center pt-2">
             <Button
               variant="outline"
               type="submit"

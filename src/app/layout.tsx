@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={avantgarde.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          {children}
+          <main className="antialiased scroll-smooth">{children}</main>
           <Footer />
           <Meteor number={10} />
         </ThemeProvider>

@@ -49,7 +49,7 @@ export const Navbar = () => {
               as={links.url}
               key={links.id}
               href={links.url}
-              className={`text-base active:animate-wiggle sm:text-xl px-3 py-2 rounded-lg transition duration-500 ease-in-out ${
+              className={`text-base active:animate-wiggle sm:text-xl px-2 xl:px-3 py-2 rounded-lg transition duration-500 ease-in-out ${
                 isLinkActive(links.url)
                   ? "bg-purple-600"
                   : "hover:bg-purple-400"

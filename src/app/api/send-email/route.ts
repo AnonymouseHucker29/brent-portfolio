@@ -1,8 +1,5 @@
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
 import { NextRequest, NextResponse } from "next/server";
-
-dotenv.config();
 
 const myEmail = process.env.EMAIL;
 const password = process.env.PASSWORD;
